@@ -22,7 +22,7 @@ public class CachingBreedFetcher implements BreedFetcher {
     }
 
     @Override
-    public List<String> getSubBreeds(String breed) {
+    public List<String> getSubBreeds(String breed) throws  BreedNotFoundException{
         if(cahceMap.containsKey(breed)){
             return cahceMap.get(breed);
         }else{
